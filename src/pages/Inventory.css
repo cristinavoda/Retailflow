@@ -1,0 +1,275 @@
+.inventory-page {
+  width: 100%;
+}
+
+
+
+.inventory-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-7);
+}
+
+
+
+.inventory-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+
+  margin-bottom: var(--space-6);
+
+  background: var(--rf-border);
+  border: 1px solid var(--rf-border);
+}
+
+.inventory-metric {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+
+  min-height: 128px;
+  padding: var(--space-5);
+
+  background: var(--rf-white);
+}
+
+.inventory-metric-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  color: var(--rf-copper);
+
+  border: 1px solid var(--rf-copper-soft);
+}
+
+.inventory-metric > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.inventory-metric .metric-value {
+  font-size: 1.8rem;
+}
+
+.inventory-metric-warning .inventory-metric-icon {
+  color: var(--rf-warning);
+  border-color: rgba(164, 119, 50, 0.25);
+}
+
+.inventory-metric-danger .inventory-metric-icon {
+  color: var(--rf-danger);
+  border-color: rgba(154, 79, 79, 0.25);
+}
+
+
+
+
+.inventory-alert {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+
+  margin-bottom: var(--space-6);
+  padding: var(--space-4) var(--space-5);
+
+  background: rgba(164, 119, 50, 0.06);
+  border-left: 2px solid var(--rf-warning);
+}
+
+.inventory-alert-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--rf-warning);
+}
+
+.inventory-alert strong {
+  display: block;
+  margin-bottom: 3px;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.inventory-alert p {
+  color: var(--rf-muted);
+  font-size: 0.8rem;
+}
+
+
+
+
+.inventory-table-section {
+  background: var(--rf-white);
+  border: 1px solid var(--rf-border);
+}
+
+.inventory-section-header {
+  padding: var(--space-5);
+
+  border-bottom: 1px solid var(--rf-border);
+}
+
+.inventory-section-header h2 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.inventory-section-header p {
+  margin-top: 5px;
+
+  color: var(--rf-muted);
+  font-size: 0.8rem;
+}
+
+
+
+
+.inventory-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.inventory-table {
+  width: 100%;
+  min-width: 700px;
+
+  border-collapse: collapse;
+}
+
+.inventory-table th {
+  padding: 13px 18px;
+
+  color: var(--rf-muted);
+
+  background: var(--rf-ivory);
+
+  border-bottom: 1px solid var(--rf-border);
+
+  text-align: left;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.inventory-table td {
+  padding: 16px 18px;
+
+  border-bottom: 1px solid var(--rf-border);
+
+  font-size: 0.82rem;
+}
+
+.inventory-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.inventory-table tbody tr:hover {
+  background: rgba(184, 115, 51, 0.025);
+}
+
+
+
+
+.inventory-product-name {
+  font-weight: 500;
+}
+
+.inventory-sku {
+  color: var(--rf-muted);
+
+  font-family: monospace;
+  font-size: 0.75rem;
+}
+
+.inventory-category {
+  color: var(--rf-muted);
+}
+
+.inventory-stock {
+  font-weight: 600;
+}
+
+.inventory-stock-low {
+  color: var(--rf-warning);
+}
+
+
+
+.inventory-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.inventory-status-dot {
+  width: 6px;
+  height: 6px;
+
+  background: currentColor;
+}
+
+.status-ok {
+  color: var(--rf-success);
+}
+
+.status-low {
+  color: var(--rf-warning);
+}
+
+.status-out {
+  color: var(--rf-danger);
+}
+
+
+
+@media (max-width: 1000px) {
+
+  .inventory-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .inventory-header {
+    margin-bottom: var(--space-5);
+  }
+
+  .inventory-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .inventory-metric {
+    min-height: 100px;
+  }
+
+  .inventory-alert {
+    align-items: flex-start;
+  }
+
+  .inventory-section-header {
+    padding: var(--space-4);
+  }
+
+  .inventory-table th,
+  .inventory-table td {
+    padding: 13px 14px;
+  }
+
+}
