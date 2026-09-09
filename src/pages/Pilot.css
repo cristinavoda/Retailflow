@@ -1,0 +1,401 @@
+.pilot-page {
+  width: 100%;
+}
+
+
+.pilot-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-5);
+  margin-bottom: var(--space-7);
+}
+
+.pilot-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pilot-title-row svg {
+  color: var(--rf-copper);
+}
+
+.pilot-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 8px;
+
+  color: var(--rf-muted);
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.pilot-status-dot {
+  width: 7px;
+  height: 7px;
+  background: var(--rf-success);
+  border-radius: 50%;
+}
+
+
+
+.pilot-overview {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+
+  padding: 28px 32px;
+  margin-bottom: var(--space-7);
+
+  background: var(--rf-graphite);
+  color: var(--rf-white);
+}
+
+.pilot-overview-icon {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 46px;
+  height: 46px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--rf-copper);
+}
+
+.pilot-overview-content {
+  max-width: 760px;
+}
+
+.pilot-overview-content .metric-label {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.pilot-overview-content h2 {
+  margin-top: 8px;
+
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+
+.pilot-overview-content p {
+  margin-top: 8px;
+
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+
+
+.pilot-section {
+  margin-bottom: var(--space-8);
+}
+
+.pilot-section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+.pilot-section-header h2,
+.pilot-activity-header h2 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.pilot-section-header p,
+.pilot-activity-header p {
+  margin-top: 5px;
+
+  color: var(--rf-muted);
+  font-size: 0.82rem;
+}
+
+
+
+.pilot-insights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.pilot-insight {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 330px;
+
+  padding: 24px;
+
+  background: var(--rf-white);
+  border: 1px solid var(--rf-border);
+
+  transition:
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.pilot-insight:hover {
+  border-color: var(--rf-border-strong);
+  transform: translateY(-2px);
+}
+
+
+
+.pilot-insight-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid var(--rf-border);
+}
+
+.pilot-insight-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  border: 1px solid var(--rf-border);
+  color: var(--rf-copper);
+}
+
+.pilot-insight-label {
+  color: var(--rf-muted);
+
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+
+
+.pilot-insight-content {
+  padding-top: 20px;
+}
+
+.pilot-insight-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.pilot-insight-content p {
+  margin-top: 10px;
+
+  color: var(--rf-muted);
+  font-size: 0.84rem;
+  line-height: 1.65;
+}
+
+
+.pilot-recommendation {
+  margin-top: auto;
+  padding-top: 22px;
+}
+
+.pilot-recommendation .metric-label {
+  display: block;
+  margin-bottom: 7px;
+}
+
+.pilot-recommendation p {
+  color: var(--rf-graphite);
+
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+
+
+
+.pilot-insight-action {
+  margin-top: 20px;
+  padding-top: 16px;
+
+  border-top: 1px solid var(--rf-border);
+}
+
+.pilot-insight-action button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  width: 100%;
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+
+  color: var(--rf-copper-dark);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.pilot-insight-action button svg {
+  flex: 0 0 auto;
+
+  transition: transform var(--transition-fast);
+}
+
+.pilot-insight-action button:hover svg {
+  transform: translateX(4px);
+}
+
+
+
+
+.pilot-insight-critical {
+  border-top: 2px solid var(--rf-danger);
+}
+
+.pilot-insight-critical .pilot-insight-icon {
+  color: var(--rf-danger);
+}
+
+.pilot-insight-warning {
+  border-top: 2px solid var(--rf-warning);
+}
+
+.pilot-insight-warning .pilot-insight-icon {
+  color: var(--rf-warning);
+}
+
+.pilot-insight-opportunity {
+  border-top: 2px solid var(--rf-copper);
+}
+
+
+.pilot-activity {
+  padding-top: 4px;
+}
+
+.pilot-activity-header {
+  margin-bottom: 18px;
+}
+
+.pilot-activity-list {
+  border-top: 1px solid var(--rf-border);
+}
+
+.pilot-activity-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 16px 4px;
+
+  border-bottom: 1px solid var(--rf-border);
+}
+
+.pilot-activity-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  border: 1px solid var(--rf-border);
+  color: var(--rf-copper);
+
+  flex: 0 0 auto;
+}
+
+.pilot-activity-item div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.pilot-activity-item strong {
+  font-size: 0.83rem;
+  font-weight: 500;
+}
+
+.pilot-activity-item span {
+  color: var(--rf-muted);
+  font-size: 0.75rem;
+}
+
+
+
+@media (max-width: 1100px) {
+  .pilot-insights {
+    grid-template-columns: 1fr;
+  }
+
+  .pilot-insight {
+    min-height: auto;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .pilot-header {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: var(--space-6);
+  }
+
+  .pilot-status {
+    padding-top: 0;
+  }
+
+  .pilot-overview {
+    padding: 24px 20px;
+  }
+
+  .pilot-overview-content h2 {
+    font-size: 1.15rem;
+  }
+
+  .pilot-insight {
+    padding: 20px;
+  }
+}
+
+
+@media (max-width: 520px) {
+  .pilot-overview {
+    gap: 14px;
+  }
+
+  .pilot-overview-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .pilot-overview-content p {
+    font-size: 0.82rem;
+  }
+
+  .pilot-insight-content h3 {
+    font-size: 1rem;
+  }
+
+  .pilot-activity-item {
+    padding: 14px 0;
+  }
+}
